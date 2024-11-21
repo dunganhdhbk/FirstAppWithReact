@@ -1,0 +1,56 @@
+/* User List Screen */
+.layout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    transition: width 0.3s;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar.collapsed {
+    width: 8%; /* Reduce size further when collapsed */
+}
+
+#user-list {
+    list-style: none;
+    padding: 0;
+}
+
+#user-list li {
+    background: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-list li:hover {
+    background: #4a90e2;
+    color: white;
+}
+
+.toggle-button {
+    background: #000000;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background: #555555;
+}

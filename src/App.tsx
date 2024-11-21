@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MyButton from './MyButton/MyButton'
+import AboutPage from "./AboutPage/AboutPage";
+import Profile from "./Profile/Profile";
+import LoginForm from "./LoginForm/LoginForm";
+import ActiveUserList from "./ActiveUserList/ActiveUserList";
+
+let isLoggedIn = false;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            {
+                !isLoggedIn ? (
+                    <LoginForm/>
+                ) : (
+                    <ActiveUserList/>
+                )
+            }
+        </div>
+    );
 }
 
 export default App;
